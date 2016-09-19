@@ -1,0 +1,6 @@
+CS 559 Computer Graphics
+UW-Madison
+Fall 2016
+Eric Sullivan
+
+This program was written to experiment with javascript context transformations. When you run the code you will find an empty canvas with two buttons. The add ball button will draw a ball on the screen with eight orbs that rotate around the ball. These balls represent the hit points of the ball and are lost when a collision with another ball occurs. The second button is the remove ball button which simply removes a ball from the screen.
