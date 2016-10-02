@@ -1,0 +1,11 @@
+CS 559 Computer Graphics
+UW-Madison
+Fall 2016
+Eric Sullivan
+
+This program was written to experiment with TWGL, a linear algebra library for javascript.
+The program supports rotating between all of the targets on the screen by pressing the target
+button and you can move the camera around by pressing the arrow keys on the keyboard.
+The program could be improved by actually drawing the objects in the correct order so
+elements of the world that are behind another element are not drawn in front.
+I have only tested this with google chrome.
