@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P5</title>
+    <script id="vs" type="not-js">
+      attribute vec3 vPosition;
+      attribute vec3 vColor;
+      attribute vec3 vNormal;
+      varying vec3 fColor;
+      varying vec3 fNormal;
+      varying vec3 fPosition;
+      uniform mat4 uMVP;
+      uniform mat4 tNormal;
+
+      void main(void) {
+        gl_Position = uMVP * vec4(vPosition, 1.0);
+	    fColor = vColor;
+	    fPosition = vPosition;
+	    fNormal = normalize(mat3(tNormal) * vNormal);
+      }
+    </script>
+
+    <script id="fs" type="not-js">
+      precision highp float;
+      varying vec3 fColor;
+      varying vec3 fNormal;
+      varying vec3 fPosition;
+
+      void main(void) {
+         vec3 dir = vec3(0, 1, 0);
+	     gl_FragColor = vec4(fColor, 1.0);
+      }
+    </script>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <script src="http://graphics.cs.wisc.edu/JS/twgl-full.min.js"></script>
+    <script src="world.js"></script>
+    <script src="script.js"></script>
+    <script src="disc.js"></script>
+    <script src="axes.js"></script>
+    <script src="cube.js"></script>
+    <script src="pyramid.js"></script>
+    <script src="triangle.js"></script>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <button id="target">TARGET SELECT</button>
+    <h3>Eric Sullivan</h3>
+    <h3>Computer Graphics</h3>
+    <h3>UW-Madison Fall 2016</h3>
+</body>
+</html>
